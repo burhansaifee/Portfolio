@@ -45,10 +45,10 @@
 }
 
 .area {
-	background: #000;
-	background: -webkit-linear-gradient(to left, #000, #000);
+	background: #000000b0;
+	background: -webkit-linear-gradient(to left, #c00808, #091fe2);
 	width: 100%;
-	height: 100vh;
+	height: 100%;
 	position: absolute;
 	z-index: -1;
 }
@@ -68,7 +68,7 @@
 	list-style: none;
 	width: 20px;
 	height: 20px;
-	background: rgba(255, 255, 255, 0.2);
+	background: rgba(194, 14, 14, 0.445);
 	animation: animate 25s linear infinite;
 	bottom: -150px;
 }

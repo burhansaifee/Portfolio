@@ -1,7 +1,7 @@
 
 import React from "react";
 import Pomodoro from '../assets/Circuit diagram.jpeg'
-import copeople from '../assets/copeople.png'
+import Parking from '../assets/Smart Parking.jpeg'
 import Footer from './Footer'
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
@@ -10,8 +10,8 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             {title == 'Pomodoro Timer' && <a href="#">
                 <img className="w-full rounded-t-lg h-auto object-cover " src={Pomodoro} alt="" />
             </a>}
-            {title == 'Snap Shot' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={copeople} alt="" />
+            {title == 'Smart Parking' && <a href="#">
+                <img className="w-full rounded-t-lg h-auto object-cover " src={Parking} alt="" />
             </a>}
             
             <div className="p-4 sm:p-6">
@@ -68,11 +68,11 @@ export const project = [
         technologies: ['Embedded C', 'Iot Devices',]
     },
     {
-        title: 'Snap Shot',
-        description: 'SnapShot is a stunning portfolio that I exclusively designed using React JS and tailwind CSS.This Project serves as a representation of a photographer’s work, highlighting their portfolio and services.',
-        image: { copeople },
-        git: "https://github.com/nithingooud/vpn_studios",
-        technologies: ['React JS', 'tailwind CSS']
+        title: 'Smart Parking',
+        description: 'This Smart Parking System is an IoT-based automated solution designed to efficiently manage vehicle parking using Arduino Nano, IR sensors, an ultrasonic sensor, a servo motor, and an ESP8266 Wi-Fi module. The system detects available parking slots using IR sensors, controls entry through an automated gate, and provides online booking functionality via a Flask web server.🚀 This project demonstrates expertise in IoT, embedded systems, and web development.',
+        image: { Parking },
+        git: "https://github.com/burhansaifee/Iot-Projects/tree/main/Smart%20Parking",
+        technologies: ['Embedded C', 'Arduino Nano', 'IR Sensore', 'Python', 'HTML']
     },
     
 ]

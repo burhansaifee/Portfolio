@@ -2,6 +2,7 @@
 import React from "react";
 import Pomodoro from '../assets/Circuit diagram.jpeg'
 import Parking from '../assets/Smart Parking.jpeg'
+import Analyzer from '../assets/Resume Analyzer.mp4'
 import Footer from './Footer'
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
@@ -12,6 +13,9 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             </a>}
             {title == 'Smart Parking' && <a href="#">
                 <img className="w-full rounded-t-lg h-auto object-cover " src={Parking} alt="" />
+            </a>}
+            {title == 'Resume Analyzer' && <a href="#">
+                <video className="w-full rounded-t-lg h-auto object-cover " src={Analyzer} alt="" controls />
             </a>}
             
             <div className="p-4 sm:p-6">
@@ -73,6 +77,18 @@ export const project = [
         image: { Parking },
         git: "https://github.com/burhansaifee/Iot-Projects/tree/main/Smart%20Parking",
         technologies: ['Embedded C', 'Arduino Nano', 'IR Sensore', 'Python', 'HTML']
+    },
+
+    {
+        title: 'Resume Analyzer',
+        description: `Resume Analyzer, a tool designed to help job seekers optimize their resumes for specific job descriptions. This application takes a resume and a job description as input, analyzes the compatibility between them, and provides a compatibility score along with actionable suggestions to improve the resume for better alignment with the job.
+        Features:
+        Compatibility Score: Calculates how well your resume matches a given job description.
+        Tailored Suggestions: Offers specific recommendations to enhance your resume based on the job requirements.
+        Screening Optimization: Increases your chances of passing the initial resume screening process by aligning your resume with the job description.`,
+        image: {Analyzer},
+        git: "https://github.com/arvinder004/Resume_Analyzer",
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'Gemini', 'Flask']
     },
     
 ]

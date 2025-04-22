@@ -1,6 +1,5 @@
 import React from 'react';
 import '../App.css';
-
 import ButtonLink from './ButtonLink';
 import Footer from './Footer';
 
@@ -28,13 +27,13 @@ const About = () => {
   return (
     <div>
 
-      <div className='bg-black h-full w-full text-white sm:flex sm:justify-around about py-12 mt-8 overflow-x-hidden' id='about'>
+     <div className='bg-black h-full w-full text-white sm:flex sm:justify-around about py-12 mt-8 overflow-x-hidden' id='about'>
         <div className='flex flex-col justify-around'>
           <div className='sm:px-16 px-2'>
             <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Introduction</h2>
             <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>👨‍💻 Hi, I'm <a className='text-green-300 hover:text-green-500 duration-300' href='https://www.linkedin.com/in/burhanuddin-saifee-6aa15b255?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' target='_blank'>Burhanuddin Saifee</a>, a 2022-2026 student🎓.I am a passionate and driven student of Computer Science with a strong interest in IoT, web development, and programming. My curiosity for technology has led me to explore various aspects of software and hardware, from building interactive websites and applications to developing smart IoT devices that enhance everyday life.
               <br />
-              With a solid foundation in languages like HTML, CSS, JavaScript, and Python, I enjoy creating seamless digital experiences while also integrating them with IoT solutions. My enthusiasm for cybersecurity and blockchain further fuels my desire to build secure and efficient systems.
+              With a solid foundation in languages like HTML, CSS, JavaScript,React and Python, I enjoy creating seamless digital experiences while also integrating them with IoT solutions. My enthusiasm for cybersecurity and blockchain further fuels my desire to build secure and efficient systems.
             </p>
             <p className='mt-3 mb-6 text-[17px] max-w-3xl leading-[30px]'>Beyond technology, I have a deep love for playing football, cooking, trekking, and traveling. Exploring new places and experiencing different cultures inspires me, while football and trekking keep me active and motivated. Cooking is another passion of mine, allowing me to experiment and create something unique, much like in programming.
 
@@ -44,7 +43,7 @@ const About = () => {
             <ButtonLink
               url='https://docs.google.com/document/d/1xWOWXBfxeERW-9LhO6xZNG3Ufx2pqH1XHgvbK3vI5EM/edit?usp=sharing'
               text='View Resume →'
-              padding={`p-3`}
+              padding={'p-3'}
             />
 
           </div>
@@ -54,7 +53,7 @@ const About = () => {
       </div>
       <Footer />
     </div>
-  )
+)
 }
 
 export default About;

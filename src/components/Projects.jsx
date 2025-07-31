@@ -3,6 +3,7 @@ import React from "react";
 import Pomodoro from '../assets/Circuit diagram.jpeg'
 import Parking from '../assets/Smart Parking.jpeg'
 import Analyzer from '../assets/Resume Analyzer.mp4'
+import TurfFees from '../assets/TurfFees.mp4'
 import Footer from './Footer'
 
 const ProjectCard = ({ image, title, description, git, technologies }) => {
@@ -16,6 +17,9 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             </a>}
             {title == 'Resume Analyzer' && <a href="#">
                 <video className="w-full rounded-t-lg h-auto object-cover " src={Analyzer} alt="" controls />
+            </a>}
+            {title == 'Turf Fees Management System' && <a href="#">
+                <video className="w-full rounded-t-lg h-auto object-cover " src={TurfFees} alt="" controls />
             </a>}
             
             <div className="p-4 sm:p-6">
@@ -90,6 +94,20 @@ export const project = [
         git: "https://github.com/arvinder004/Resume_Analyzer",
         technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'Gemini', 'Flask']
     },
+    
+     {
+        title: 'Turf Fees Management System',
+        description: `Turf Fees Management System is a web-based application designed to streamline the management of turf fees collection.
+        Features:
+        User Management: Allows administrators to add, update, and remove users, assign roles, and manage access permissions.
+        - Reporting & Analytics: Generates detailed reports on collections, outstanding balances, and user activity, helping admins make informed decisions.
+        - Responsive Design: Provides a user-friendly interface accessible from desktops, tablets, and mobile devices.
+          This system simplifies fee management, reduces manual errors.`,
+        image: {TurfFees},
+        git: "https://github.com/arvinder004/Resume_Analyzer",
+        technologies: ['HTML', 'CSS', 'JavaScript', 'Python', 'Gemini', 'Flask']
+    },
+    
     
 ]
 

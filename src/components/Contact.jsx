@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { EMAIL_JS_SERVICE_ID, EMAIL_JS_TEMPLATE_ID, EMAIL_JS_PUBLIC_KEY } from "../constant/constants";
 import Footer from "./Footer";
+emailjs.init(EMAIL_JS_PUBLIC_KEY);
 const Contact = () => {
 	const formRef = useRef();
 	const [form, setForm] = useState({
@@ -29,7 +30,6 @@ const Contact = () => {
 		e.preventDefault();
 		setLoading(true);
 
-		// cleaning the form data
 		const username = form.name.trim();
 		const user_email = form.email.trim();
 		const user_message = form.message.trim();
@@ -41,19 +41,12 @@ const Contact = () => {
 			});
 			return;
 		}
-		console.log(username, user_email, user_message)
 
 		emailjs
-			.send(
+			.sendForm(
 				EMAIL_JS_SERVICE_ID,
 				EMAIL_JS_TEMPLATE_ID,
-				{
-					from_name: username,
-					to_name: "Burhanuddin",
-					reply_to: user_email,
-					to_email: "burhansaifee2003@gmail.com",
-					message: user_message,
-				},
+				formRef.current,
 				EMAIL_JS_PUBLIC_KEY
 			)
 			.then(
@@ -80,7 +73,7 @@ const Contact = () => {
 
 	return (
 
-		<div className='relative z-0 bg-black w-screen h-screen mt-12'>
+		<div className='relative z-0 bg-black w-screen min-h-screen mt-12'>
 			<div className='text-white contact overflow-x-hidden pt-12 mt-8 ' id='contact'>
 				<div className='z-10 w-full sm:w-[650px] m-auto p-8 rounded-2xl' >
 					<p className='font-light'>REACH OUT TO ME</p>
